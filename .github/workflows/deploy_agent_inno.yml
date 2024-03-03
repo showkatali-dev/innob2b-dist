@@ -18,7 +18,7 @@ jobs:
       - name: Deploy to Server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST_ITT }}
-          username: ${{ secrets.USERNAME_IT }}
-          key: ${{ secrets.SSHKEY_IT }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEY }}
           script: "cd /var/www/agent.innotraveltech.com && ./.scripts/deploy.sh"
