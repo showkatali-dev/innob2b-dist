@@ -78,3 +78,14 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYGTR }}
           script: "cd /var/www/orbit.gtrsystem.com && ./.scripts/deploy.sh"
+  deployhstrip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOSTHSTRIP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEYHSTRIP }}
+          script: "cd /var/www/agent.hstrip.net && ./.scripts/deploy.sh"
