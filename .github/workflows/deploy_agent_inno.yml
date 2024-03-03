@@ -31,6 +31,6 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST2 }}
-          username: ${{ secrets.USERNAME2 }}
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEY2 }}
           script: "cd /var/www/agent.airpass.tours && ./.scripts/deploy.sh"
