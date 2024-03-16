@@ -155,3 +155,14 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYSINBD }}
           script: "cd /var/www/agent.sinbadbd.com && ./.scripts/deploy.sh"
+  deploybiggo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOSTBIGGO }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEYBIGGO }}
+          script: "cd /var/www/agent.biggo.travel && ./.scripts/deploy.sh"
