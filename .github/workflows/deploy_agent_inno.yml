@@ -166,3 +166,14 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYBIGGO }}
           script: "cd /var/www/agent.biggo.travel && ./.scripts/deploy.sh"
+  deployumrah:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOSTUMRAH }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEYUMRAH }}
+          script: "cd /var/www/agent.umrahbooking.com && ./.scripts/deploy.sh"
