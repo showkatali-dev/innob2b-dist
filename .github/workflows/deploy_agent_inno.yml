@@ -176,4 +176,4 @@ jobs:
           host: ${{ secrets.HOSTUMRAH }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHUMRAH }}
-          script: "cd /var/www/agent.umrahbooking.com && ./.scripts/deploy.sh"
+          script: "cd /var/www/b2b.umrahbooking.com && ./.scripts/deploy.sh"
