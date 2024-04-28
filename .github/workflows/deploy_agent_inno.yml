@@ -11,17 +11,17 @@ on:
 # Authenticate to the the server via ssh
 # and run our deployment script
 jobs:
-  # deploy1:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Deploy to Server
-  #       uses: appleboy/ssh-action@master
-  #       with:
-  #         host: ${{ secrets.HOST }}
-  #         username: ${{ secrets.USERNAME }}
-  #         key: ${{ secrets.SSHKEY }}
-  #         script: "cd /var/www/agent.innotraveltech.com && ./.scripts/deploy.sh && cd /var/www/nsn.innotraveltech.com && ./.scripts/deploy.sh && cd /var/www/apps.fasttravel.pk && ./.scripts/deploy.sh"
+  deploy1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEY }}
+          script: "cd /var/www/nsn.innotraveltech.com && ./.scripts/deploy.sh && cd /var/www/apps.fasttravel.pk && ./.scripts/deploy.sh"
 
   deploy2:
     runs-on: ubuntu-latest
