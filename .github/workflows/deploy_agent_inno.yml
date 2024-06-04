@@ -188,3 +188,14 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHRMM }}
           script: "cd /var/www/agent.rmmtravel.com && ./.scripts/deploy.sh"
+  deployorbitgtr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOSTORBIT }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHORBIT }}
+          script: "cd /var/www/orbit.gtrsystem.com && ./.scripts/deploy.sh"
