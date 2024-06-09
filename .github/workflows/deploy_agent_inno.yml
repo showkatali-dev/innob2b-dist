@@ -21,7 +21,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEY }}
-          script: "cd /var/www/nsn.innotraveltech.com && ./.scripts/deploy.sh && cd /var/www/apps.fasttravel.pk && ./.scripts/deploy.sh"
+          script: "cd /var/www/apps.fasttravel.pk && ./.scripts/deploy.sh"
 
   deploy2:
     runs-on: ubuntu-latest
