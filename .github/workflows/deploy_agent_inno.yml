@@ -18,9 +18,9 @@ jobs:
       - name: Deploy to Server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
+          host: ${{ secrets.HOSTFAST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSHKEY }}
+          key: ${{ secrets.SSHFAST }}
           script: "cd /var/www/apps.fasttravel.pk && ./.scripts/deploy.sh"
 
   deploy2:
