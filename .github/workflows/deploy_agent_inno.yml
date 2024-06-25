@@ -176,4 +176,4 @@ jobs:
           host: ${{ secrets.HOSTORBIT }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYORBIT }}
-          script: "cd /var/www/orbit.gtrsystem.com/public/dist && ./.scripts/deploy.sh"
+          script: "cd /var/www/orbit.gtrsystem.com/dist && ./.scripts/deploy.sh"
