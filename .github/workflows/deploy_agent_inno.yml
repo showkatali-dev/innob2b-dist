@@ -78,17 +78,17 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYHSTRIP }}
           script: "cd /var/www/agent.hstrip.net/dist && ./.scripts/deploy.sh"
-  # deploymyvoiaj:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Deploy to Server
-  #       uses: appleboy/ssh-action@master
-  #       with:
-  #         host: ${{ secrets.HOSTMYVOIAJ }}
-  #         username: ${{ secrets.USERNAME }}
-  #         key: ${{ secrets.SSHKEYMYVOIAJ }}
-  #         script: "cd /var/www/agent.myvoiaj.com && ./.scripts/deploy.sh"
+  deploymyvoiaj:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOSTMYVOIAJ }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEYMYVOIAJ }}
+          script: "cd /var/www/agent.myvoiaj.com/dist && ./.scripts/deploy.sh"
   # deploynakamura:
   #   runs-on: ubuntu-latest
   #   steps:
