@@ -34,17 +34,17 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEY2 }}
           script: "cd /var/www/agent.airpass.tours/dist && ./.scripts/deploy.sh"
-  # deployakij:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Deploy to Server
-  #       uses: appleboy/ssh-action@master
-  #       with:
-  #         host: ${{ secrets.HOSTAKIJ }}
-  #         username: ${{ secrets.USERNAME }}
-  #         key: ${{ secrets.SSHKEYAKIJ }}
-  #         script: "cd /var/www/agent.akijair.com/dist && ./.scripts/deploy.sh"
+  deployakij:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOSTAKIJ }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEYAKIJ }}
+          script: "cd /var/www/agent.akijair.com/dist && ./.scripts/deploy.sh"
   # deploybuyairticket:
   #   runs-on: ubuntu-latest
   #   steps:
