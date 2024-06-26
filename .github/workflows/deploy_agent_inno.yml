@@ -23,17 +23,17 @@ jobs:
           key: ${{ secrets.SSHFAST }}
           script: "cd /var/www/apps.fasttravel.pk/dist && ./.scripts/deploy.sh"
 
-  # deploy2:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Deploy to Server
-  #       uses: appleboy/ssh-action@master
-  #       with:
-  #         host: ${{ secrets.HOST2 }}
-  #         username: ${{ secrets.USERNAME }}
-  #         key: ${{ secrets.SSHKEY2 }}
-  #         script: "cd /var/www/agent.airpass.tours/dist && ./.scripts/deploy.sh"
+  deploy2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST2 }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEY2 }}
+          script: "cd /var/www/agent.airpass.tours/dist && ./.scripts/deploy.sh"
   # deployakij:
   #   runs-on: ubuntu-latest
   #   steps:
