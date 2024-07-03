@@ -100,17 +100,17 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYNAKAMURA }}
           script: "cd /var/www/b2b.nakamura-tour.com/dist && ./.scripts/deploy.sh"
-  deployonewagent:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Deploy to Server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOSTONEAGENT }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSHKEYONEAGENT }}
-          script: "cd /var/www/agent.oneagent.biz/dist && ./.scripts/deploy.sh"
+  # deployonewagent:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Deploy to Server
+  #       uses: appleboy/ssh-action@master
+  #       with:
+  #         host: ${{ secrets.HOSTONEAGENT }}
+  #         username: ${{ secrets.USERNAME }}
+  #         key: ${{ secrets.SSHKEYONEAGENT }}
+  #         script: "cd /var/www/agent.oneagent.biz/dist && ./.scripts/deploy.sh"
   deploysand:
     runs-on: ubuntu-latest
     steps:
