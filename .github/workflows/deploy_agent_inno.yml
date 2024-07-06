@@ -131,7 +131,7 @@ jobs:
         with:
           host: ${{ secrets.HOSTB2B }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSHKEYB2B }}
+          key: ${{ secrets.SSHB2B }}
           script: "cd /var/www/book.fasttravel.pk/dist && ./.scripts/deploy.sh && cd /var/www/partner.buyairticket.com/dist && ./.scripts/deploy.sh"
   deployorbitgtr:
     runs-on: ubuntu-latest
