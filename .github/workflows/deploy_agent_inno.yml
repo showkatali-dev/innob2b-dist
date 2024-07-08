@@ -132,7 +132,7 @@ jobs:
           host: ${{ secrets.HOSTB2B }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHB2B }}
-          script: "cd /var/www/book.fasttravel.pk/dist && ./.scripts/deploy.sh && cd /var/www/partner.buyairticket.com/dist && ./.scripts/deploy.sh"
+          script: "cd /var/www/book.fasttravel.pk/dist && ./.scripts/deploy.sh && cd /var/www/partner.buyairticket.com/dist && ./.scripts/deploy.sh && cd /var/www/agent.akijair.com/dist && ./.scripts/deploy.sh"
   deployorbitgtr:
     runs-on: ubuntu-latest
     steps:
