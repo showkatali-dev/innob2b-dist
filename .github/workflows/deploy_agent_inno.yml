@@ -121,7 +121,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHUMRAH }}
           script: "cd /var/www/b2b.umrahbooking.com/dist && ./.scripts/deploy.sh"
-
   deployb2b:
     runs-on: ubuntu-latest
     steps:
