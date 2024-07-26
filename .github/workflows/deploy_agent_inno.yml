@@ -21,7 +21,7 @@ jobs:
           host: ${{ secrets.HOST2 }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEY2 }}
-          script: "cd /var/www/agent.airpass.tours/dist"
+          script: "cd /var/www/agent.airpass.tours/dist && ./.scripts/deploy.sh"
   deployakij:
     runs-on: ubuntu-latest
     steps:
@@ -32,7 +32,7 @@ jobs:
           host: ${{ secrets.HOSTAKIJ }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYAKIJ }}
-          script: "cd /var/www/agent.akijair.com/dist"
+          script: "cd /var/www/agent.akijair.com/dist && ./.scripts/deploy.sh"
   deploygofly:
     runs-on: ubuntu-latest
     steps:
@@ -43,7 +43,7 @@ jobs:
           host: ${{ secrets.HOSTGOFLY }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYGOFLY }}
-          script: "cd /var/www/agent.gofly.com.bd/dist"
+          script: "cd /var/www/agent.gofly.com.bd/dist && ./.scripts/deploy.sh"
   deployhstrip:
     runs-on: ubuntu-latest
     steps:
@@ -54,7 +54,7 @@ jobs:
           host: ${{ secrets.HOSTHSTRIP }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYHSTRIP }}
-          script: "cd /var/www/agent.hstrip.net/dist"
+          script: "cd /var/www/agent.hstrip.net/dist && ./.scripts/deploy.sh"
   deploymyvoiaj:
     runs-on: ubuntu-latest
     steps:
@@ -65,7 +65,7 @@ jobs:
           host: ${{ secrets.HOSTMYVOIAJ }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYMYVOIAJ }}
-          script: "cd /var/www/agent.myvoiaj.com/dist"
+          script: "cd /var/www/agent.myvoiaj.com/dist && ./.scripts/deploy.sh"
   deploynakamura:
     runs-on: ubuntu-latest
     steps:
@@ -76,7 +76,7 @@ jobs:
           host: ${{ secrets.HOSTNAKAMURA }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYNAKAMURA }}
-          script: "cd /var/www/b2b.nakamura-tour.com/dist"
+          script: "cd /var/www/b2b.nakamura-tour.com/dist && ./.scripts/deploy.sh"
   deploysand:
     runs-on: ubuntu-latest
     steps:
@@ -87,7 +87,7 @@ jobs:
           host: ${{ secrets.HOSTSAND }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYSAND }}
-          script: "cd /var/www/sandbox-b2b.myvoiaj.com/dist"
+          script: "cd /var/www/sandbox-b2b.myvoiaj.com/dist && ./.scripts/deploy.sh"
   deploysinbd:
     runs-on: ubuntu-latest
     steps:
@@ -98,7 +98,7 @@ jobs:
           host: ${{ secrets.HOSTSINBD }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYSINBD }}
-          script: "cd /var/www/agent.sinbadbd.com/dist"
+          script: "cd /var/www/agent.sinbadbd.com/dist && ./.scripts/deploy.sh"
   deploybiggo:
     runs-on: ubuntu-latest
     steps:
@@ -109,7 +109,7 @@ jobs:
           host: ${{ secrets.HOSTBIGGO }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEYBIGGO }}
-          script: "cd /var/www/agent.biggo.travel/dist"
+          script: "cd /var/www/agent.biggo.travel/dist && ./.scripts/deploy.sh"
   deployumrah:
     runs-on: ubuntu-latest
     steps:
@@ -120,7 +120,7 @@ jobs:
           host: ${{ secrets.HOSTUMRAH }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHUMRAH }}
-          script: "cd /var/www/b2b.umrahbooking.com/dist"
+          script: "cd /var/www/b2b.umrahbooking.com/dist && ./.scripts/deploy.sh"
 
   deployb2b:
     runs-on: ubuntu-latest
@@ -132,7 +132,7 @@ jobs:
           host: ${{ secrets.HOSTB2B }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHB2B }}
-          script: "cd /var/www/book.fasttravel.pk/dist && cd /var/www/partner.buyairticket.com/dist && cd /var/www/agent.akijair.com/dist"
+          script: "cd /var/www/book.fasttravel.pk/dist && ./.scripts/deploy.sh && cd /var/www/partner.buyairticket.com/dist && ./.scripts/deploy.sh && cd /var/www/agent.akijair.com/dist && ./.scripts/deploy.sh"
   deployorbitgtr:
     runs-on: ubuntu-latest
     steps:
@@ -143,4 +143,4 @@ jobs:
           host: ${{ secrets.HOSTGTRS }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHGTRS }}
-          script: "cd /var/www/orbit.gtrsystem.com/dist"
+          script: "cd /var/www/orbit.gtrsystem.com/dist && ./.scripts/deploy.sh"
