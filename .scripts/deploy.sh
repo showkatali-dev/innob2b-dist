@@ -7,6 +7,3 @@ echo "Deployment started..."
 git pull origin main
 echo "New changes copied to server !"
 
-pm2 restart all
-echo "restarted server"
-
