@@ -132,7 +132,7 @@ jobs:
           host: ${{ secrets.HOSTB2B }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHB2B }}
-          script: "cd /var/www/book.fasttravel.pk/dist && git pull origin main && cd /var/www/partner.buyairticket.com/dist && git pull origin main && cd /var/www/agent.akijair.com/dist && git pull origin main"
+          script: "cd /var/www/book.fasttravel.pk/dist && git pull origin main && cd /var/www/partner.buyairticket.com/dist && git pull origin main"
   deployorbitgtr:
     runs-on: ubuntu-latest
     steps:
@@ -144,3 +144,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHGTRS }}
           script: "cd /var/www/orbit.gtrsystem.com/dist && git pull origin main"
+
+          #deployb2b: && cd /var/www/agent.akijair.com/dist && git pull origin main
