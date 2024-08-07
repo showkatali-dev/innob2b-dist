@@ -129,10 +129,10 @@ jobs:
       - name: Deploy to Server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOSTB2B }}
+          host: ${{ secrets.HOSTB2B2 }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSHB2B }}
-          script: "cd /var/www/book.fasttravel.pk/dist && git pull origin main && cd /var/www/partner.buyairticket.com/dist && git pull origin main && cd /var/www/agent.akijair.com/dist && git pull origin main && cd /var/www/agent.gofly.com.bd/dist && git pull origin main && cd /var/www/agent.hstrip.net/dist && git pull origin main && cd /var/www/agent.sinbadbd.com/dist && git pull origin main"
+          key: ${{ secrets.SSHB2B2 }}
+          script: "cd /var/www/apps.fasttravel.pk/dist && git pull origin main && cd /var/www/partner.buyairticket.com/dist && git pull origin main && cd /var/www/agent.akijair.com/dist && git pull origin main && cd /var/www/agent.gofly.com.bd/dist && git pull origin main && cd /var/www/agent.hstrip.net/dist && git pull origin main && cd /var/www/agent.sinbadbd.com/dist && git pull origin main"
   deployorbitgtr:
     runs-on: ubuntu-latest
     steps:
