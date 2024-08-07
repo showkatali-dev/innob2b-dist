@@ -133,5 +133,3 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHGTRS }}
           script: "cd /var/www/orbit.gtrsystem.com/dist && git pull origin main"
-
-          #deployb2b: && cd /var/www/agent.akijair.com/dist && git pull origin main
