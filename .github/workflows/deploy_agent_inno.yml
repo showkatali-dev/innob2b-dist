@@ -121,7 +121,7 @@ jobs:
           host: ${{ secrets.HOSTB2B2 }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHB2B2 }}
-          script: "git config --global --add safe.directory /var/www/apps.fasttravel.pk/dist && git config --global --add safe.directory /var/www/partner.buyairticket.com/dist && git config --global --add safe.directory /var/www/agent.akijair.com/dist && git config --global --add safe.directory /var/www/agent.gofly.com.bd/dist && git config --global --add safe.directory /var/www/agent.hstrip.net/dist && git config --global --add safe.directory /var/www/agent.sinbadbd.com/dist && cd /var/www/apps.fasttravel.pk/dist && git pull origin main && cd /var/www/partner.buyairticket.com/dist && git pull origin main && cd /var/www/agent.akijair.com/dist && git pull origin main && cd /var/www/agent.gofly.com.bd/dist && git pull origin main && cd /var/www/agent.hstrip.net/dist && git pull origin main && cd /var/www/agent.sinbadbd.com/dist && git pull origin main"
+          script: "cd /var/www/apps.fasttravel.pk/dist && git pull origin main && cd /var/www/partner.buyairticket.com/dist && git pull origin main && cd /var/www/agent.akijair.com/dist && git pull origin main && cd /var/www/agent.gofly.com.bd/dist && git pull origin main && cd /var/www/agent.hstrip.net/dist && git pull origin main && cd /var/www/agent.sinbadbd.com/dist && git pull origin main"
   deployorbitgtr:
     runs-on: ubuntu-latest
     steps:
@@ -133,3 +133,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHGTRS }}
           script: "cd /var/www/orbit.gtrsystem.com/dist && git pull origin main"
+
+          #deployb2b: && cd /var/www/agent.akijair.com/dist && git pull origin main
